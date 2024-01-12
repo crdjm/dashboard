@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 
+import SideNavbar from "@/components/SideNavbar"
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -18,7 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("min-h-screen w-full bg-white text-black flex", inter.className, { "debug-screens": process.env.NODE_ENV === 'development' })}>
-        <p className="border">Sidebar</p>
+        {/* <p className="border">Sidebar</p> */}
+        <SideNavbar />
         <div className="p-8 w-full">
           {children}
         </div>
